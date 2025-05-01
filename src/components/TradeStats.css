@@ -1,0 +1,108 @@
+.trade-stats-container {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 0;
+  font-family: sans-serif;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.date-capital,
+.capital-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 50px;
+}
+
+.date-capital input[type="date"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+}
+.date-capital span {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  margin-right: 50px;
+
+}
+
+.save-btn {
+  background: #00c48c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+  margin-left: auto;
+  max-width: 250px;
+}
+
+.stock-name {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+label {
+  font-size: 13px;
+  color: #888;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.status-tag {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.status-tag.win {
+  background: #d1fae5;
+  color: #10b981;
+}
+
+.profit {
+  color: #00c48c;
+  font-weight: bold;
+}
+
+
+

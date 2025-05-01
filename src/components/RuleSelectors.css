@@ -1,0 +1,46 @@
+.selectors-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.selectors-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 40%;
+}
+
+.rule-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.rule-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.rule-select {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: white;
+  font-size: 14px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+.rule-hint {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}

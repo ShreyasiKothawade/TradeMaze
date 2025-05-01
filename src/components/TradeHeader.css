@@ -1,0 +1,232 @@
+/* Wrapper layout */
+.header-wrapper {
+  padding: 16px;
+  position: relative;
+}
+
+/* Logo section */
+.logo {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+  font-size: 22px;
+  z-index: 5;
+}
+
+.logo-text-indigo {
+  color: #6b4eff;
+}
+
+.logo-text-green {
+  color: #00c48c;
+}
+
+.logo-icon {
+  color: #6b4eff;
+}
+
+/* Mobile menu toggle button - hidden by default */
+.mobile-menu-toggle {
+  display: none;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 10;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+.mobile-menu-toggle:hover {
+  color: #6b4eff;
+}
+
+/* Header bar with centered tab switcher */
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  position: relative;
+  margin-top: 30px; /* create space for logo */
+  transition: all 0.3s ease;
+}
+
+/* Tab switch buttons */
+.tabs-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.tab-btn {
+  padding: 6px 20px;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  background: #00c48c;
+  color: #fff;
+}
+
+/* Dropdown area */
+.load-section {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.load-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown {
+  padding: 6px 24px 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  background: #fff;
+  appearance: none;
+  cursor: pointer;
+}
+
+.edit-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #6b4eff;
+  pointer-events: none;
+}
+
+/* Content box */
+.tab-content {
+  margin-top: 20px;
+}
+
+.content-box {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-wrapper {
+    padding: 12px;
+  }
+  
+  .logo {
+    font-size: 18px;
+  }
+  
+  .logo .logo-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    height: auto;
+    padding: 16px;
+    margin-top: 50px;
+    background: #f6f8fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Mobile menu closed by default */
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .header-container.mobile-open {
+    max-height: 200px;
+    opacity: 1;
+    pointer-events: all;
+    padding: 16px;
+  }
+  
+  .tabs-container {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 8px 16px;
+  }
+  
+  .load-section {
+    position: static;
+    transform: none;
+    margin-top: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .header-wrapper {
+    padding: 10px;
+  }
+  
+  .logo {
+    left: 10px;
+    font-size: 16px;
+    gap: 2px;
+  }
+  
+  .logo .logo-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .load-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .dropdown {
+    width: 100%;
+    min-width: 150px;
+  }
+}
