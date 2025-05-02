@@ -9,26 +9,34 @@ import {
 import "./TradeAnalysis.css";
 
 const COLORS = {
-  good: "#006400",
-  bad: "#8B0000",
-  neutral: "#AAAAAA",
+  good: "#006400", // Dark Green
+  goodLight: "#28a745", // Bootstrap Green
+  veryGood: "#00b894", // Teal
+  bad: "#8B0000", // Dark Red
+  badLight: "#e74c3c", // Soft Red
+  veryBad: "#c0392b", // Brick Red
+  neutral: "#AAAAAA", // Grey
+  warning: "#f39c12", // Orange
+  info: "#3498db", // Blue
+  mixed: "#9b59b6", // Purple
 };
 
 const SituationalData = [
-  { name: "Strong Sector", value: 70, color: COLORS.good },
-  { name: "Uptrend Market+ Strong Sector", value: 10, color: COLORS.good },
-  { name: "Bad Fundamentals", value: 10, color: COLORS.bad },
-  { name: "Uptrend Market", value: 10, color: COLORS.good },
+  { name: "Strong Sector", value: 70, color: COLORS.veryGood },
+  { name: "Uptrend Market + Strong Sector", value: 10, color: COLORS.good },
+  { name: "Bad Fundamentals", value: 10, color: COLORS.veryBad },
+  { name: "Uptrend Market", value: 10, color: COLORS.goodLight },
 ];
 
 const EntryTriggerData = [
-  { name: "Emotional Buy", value: 30, color: COLORS.bad },
+  { name: "Emotional Buy", value: 30, color: COLORS.badLight },
   { name: "Low Cheat Entry", value: 20, color: COLORS.good },
-  { name: "VCP Buy", value: 20, color: COLORS.good },
-  { name: "Horizontal BO+ Tightness Breakout", value: 10, color: COLORS.good },
-  { name: "Horizontal BO", value: 10, color: COLORS.good },
-  { name: "Tightness Breakout", value: 10, color: COLORS.good },
+  { name: "VCP Buy", value: 20, color: COLORS.goodLight },
+  { name: "Horizontal BO + Tightness Breakout", value: 10, color: COLORS.veryGood },
+  { name: "Horizontal BO", value: 10, color: COLORS.warning },
+  { name: "Tightness Breakout", value: 10, color: COLORS.info },
 ];
+
 
 const TradePieChart = ({ title, good, bad, unknown, data }) => (
   <div className="chart-container">
